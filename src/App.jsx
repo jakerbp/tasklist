@@ -2,6 +2,7 @@ import { createContext, useEffect, useReducer, useState } from "react";
 import { NewTodo } from "./NewTodo";
 import { TodoList } from "./TodoList";
 import { TodoFilter } from "./TodoFilter";
+import { ThemeToggle } from "./ThemeToggle";
 
 const ACTIONS = {
   ADD: "ADD",
@@ -46,7 +47,6 @@ export const TodoContext = createContext();
 function App() {
   const [hideCompleted, setHideCompleted] = useState(false);
   const [filterName, setFilterName] = useState("");
-
   const [todos, dispatch] = useReducer(
     reducer,
     [
@@ -112,10 +112,13 @@ function App() {
       }}
     >
       <div className="mx-auto sm:max-w-xl px-2 max-w-sm">
+<ThemeToggle/>
         <div className="hero-content text-center">
           <div className="max-w-xl">
-            <h1 className="text-5xl font-bold text-slate-100">Task list</h1>
-            <div className="my-2 text-sm text-slate-300">
+
+            <h1 className="text-5xl font-bold text-center">Task list</h1>
+
+            <div className="my-2 text-sm ">
               <p className="py-1">
                 Add new tasks. Tick, edit & delete existing tasks.{" "}
               </p>
