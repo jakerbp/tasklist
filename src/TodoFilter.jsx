@@ -5,11 +5,11 @@ export function TodoFilter({
   setHideCompleted,
 }) {
   return (
-    <div className="filter-form flex items-center flex-nowrap gap-4 pb-2 mb-4 border-b-2 border-slate-500 justify-between">
+    <div className="filter-form flex items-center flex-nowrap gap-4 justify-between">
       <input
         type="text"
         id="name"
-        className="input input-sm my-2 input-bordered w-full hover:input-primary focus:input-primary"
+        className="input input-sm mt-2 input-bordered w-full hover:input-primary focus:input-primary"
         value={filterName}
         placeholder="Filter by task name..."
         onChange={(e) => setFilterName(e.target.value)}

@@ -134,6 +134,7 @@ function App() {
           hideCompleted={hideCompleted}
           setHideCompleted={setHideCompleted}
         />
+        <div className="divider"></div> 
         <TodoList />
       </div>
     </TodoContext.Provider>
